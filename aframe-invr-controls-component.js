@@ -16,10 +16,13 @@ AFRAME.registerComponent('invr-widget', {
     var step = 0.1;
     /* Todo
     
+    handle depth (duh)
     define step size as parameter in schema, stay coherent with speech component
        cf https://github.com/Utopiah/aframe-speech-controls-component
     if controller detected, disable gaze and replace by grab
     relative position and size as parameters
+    make saving more explicit, e.g. display text for 5sec then hide
+	console is not practical on mobile and alert is too violent
     
     */
     var interface = document.createElement("a-entity");
