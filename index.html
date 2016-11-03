@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2016 by Utopiah (http://jsbin.com/kuculi/3/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width">
+  <title>in VR edition widget</title>
+  <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+  <script src="https://rawgit.com/bryik/aframe-bmfont-text-component/master/dist/aframe-bmfont-text-component.min.js"></script>
+  <script src="https://raw.githubusercontent.com/Utopiah/aframe-invr-controls-component/master/aframe-invr-controls-component.js"></script>
+</head>
+<body>
+<!--
+in VR edition widget
+
+-->
+<a-scene>
+  <a-entity camera look-controls>
+  <a-entity cursor="fuse: true; fuseTimeout: 200"
+            position="0 0 -1.5"
+            geometry="primitive: ring"
+            material="color: black; shader: flat" scale="0.1 0.1 0.1">
+    <a-animation begin="cursor-fusing" easing="ease-in" attribute="scale"
+                 fill="forwards" from="0.1 0.1 0.1" to="0.01 0.01 0.1"></a-animation>
+  </a-entity>
+</a-entity>
+<a-entity position="-2 0 -4" bmfont-text="text: group A (N)" material="color: black"></a-entity>
+<a-entity position="-2 -1 -5" id="box" geometry="primitive: box" material="color: red"></a-entity>
+<a-entity position=" 0 0 -4" bmfont-text="text: group B (M)" material="color: black"></a-entity>
+<a-entity position=" 0 -1 -5" id="box" geometry="primitive: box" material="color: green"></a-entity>
+<a-entity position=" 2 0 -4" bmfont-text="text: group C (P)" material="color: black"></a-entity>
+<a-entity position=" 2 -1 -5" id="box" invr-widget geometry="primitive: box" material="color: blue"></a-entity>
+</a-scene>
+  
+<script src="http://static.jsbin.com/js/render/edit.js?3.40.0"></script>
+<script>jsbinShowEdit && jsbinShowEdit({"static":"http://static.jsbin.com","root":"http://jsbin.com"});</script>
+<script src="http://static.jsbin.com/js/vendor/eventsource.js?3.40.0"></script>
+<script src="http://static.jsbin.com/js/spike.js?3.40.0"></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-1656750-34', 'auto');
+ga('require', 'linkid', 'linkid.js');
+ga('require', 'displayfeatures');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
